@@ -20,3 +20,23 @@
 
 <!-- dismiss expanded navigation bar with click -->
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+<!-- shield email from web Crawlers to some extend -->
+<script type="text/javascript">
+    var username = "{{ .Site.Params.eMailUser }}";
+    var domain = "{{ .Site.Params.eMailDomain }}";
+    function Email() {
+        var email = username.substring(0) + "@" + domain.substring(0);
+        var t;
+
+        $(window).blur(function() {
+            clearTimeout(t);
+        });
+
+        t = setTimeout(function() {
+            alert("No Email client configured! Please mail here with you're prefered client:\n" + email);
+        }, 500);
+
+        window.location.href = "mailto:" + email;        
+    }
+</script>

@@ -16,7 +16,7 @@
 
         {{ if .Site.GoogleAnalytics }}
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>    
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments)};
@@ -65,7 +65,11 @@
                     {{ if .Site.Menus.icon }}
                         <ul class="nav navbar-nav navbar-right">
                             {{ range sort .Site.Menus.icon }}
-                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
+                                {{ if eq .URL "#" }}   
+                                    <li class="navbar-icon"><a href="{{ .URL }}" onclick="javascript:Email()"><i class="fa fa-{{ .Name }}"></i></a></li>
+                                {{ else }}
+                                    <li class="navbar-icon"><a href="{{ .URL }}" rel="noopener noreferrer" target="_blank"><i class="fa fa-{{ .Name }}"></i></a></li>
+                                {{ end }}
                             {{ end }}
                         </ul>
                     {{ end }}
