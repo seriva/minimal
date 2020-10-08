@@ -1,15 +1,7 @@
 {{ partial "header" . }}
 
 <main>
-
-    <div class="intro">
-
-        {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
-
-        <h4>{{ markdownify .Site.Params.Description }}</h4>
-
-    </div>
-
+    {{ .Site.Params.twitterFeed  | safeHTML }}
 </main>
 
 {{ partial "footer" . }}
