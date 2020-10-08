@@ -79,11 +79,21 @@ a:hover {
     background-color: var(--accent);
 }
 
-/*navigation bar icons*/
+/*navigation bar*/
 
 .navbar-icon {
-    font-size: 125%;
+    font-size: 140%;
     display: inline-block !important;
+}
+
+.navbar-menu {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: 130%;
+    font-weight: bold;
 }
 
 /*coloured borders at top and bottom of the page*/
