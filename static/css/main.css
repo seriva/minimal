@@ -47,6 +47,11 @@ main {
 
 /*apply accent colour to links*/
 
+a {
+    color: white;
+}
+
+
 a:link, a:visited {
     color: var(--accent);
 }
@@ -98,8 +103,25 @@ a:hover {
 
 /*coloured borders at top and bottom of the page*/
 
+.navbar-collapse {
+    border-top: 0px !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: var(--header-font-color) !important;
+}
+
+.navbar-default .navbar-brand {
+    color: var(--header-font-color) !important;
+}
+
 .navbar.navbar-default {
-    border-top: var(--border-width) solid var(--accent);
+    border-bottom: var(--border-width) solid var(--accent);
+    background-color: var(--header-color);
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: var(--border-width) solid var(--accent) !important;
 }
 
 footer {
