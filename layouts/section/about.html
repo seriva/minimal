@@ -1,0 +1,8 @@
+{{ partial "header" . }}
+
+<main>
+    {{ with .Site.Params.aboutProfilePic }} <img class="about-pic" src="{{ . }}"> {{ end }}
+    <h4>{{ markdownify .Site.Params.aboutDescription }}</h4>
+</main>
+
+{{ partial "footer" . }}

@@ -22,25 +22,11 @@ main {
     margin: 15px 0;
 }
 
-/*home page*/
+/*about page*/
 
-.intro {
-    transform: translateY(10vh);
-}
-
-.intro > h1 {
-    color: #212121;
-    font-size: 12vh;
-}
-
-.intro > h2 {
-    color: #757575;
-    font-size: 3vmin;
-}
-
-.intro > .profile {
-    width: 20vh;
-    height: 20vh;
+.about-pic {
+    width: 15vh;
+    height: 15vh;
     border-radius: 50%;
     margin-bottom: 20px;
 }
